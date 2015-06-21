@@ -1,0 +1,25 @@
+<style>
+.rate{
+  cursor:pointer;
+  color:#555;
+}
+.rate.starred{
+  color:#fff;
+}
+</style>
+
+<div class="rating">
+  <b class="rate">★</b>
+  <b class="rate">★</b>
+  <b class="rate">★</b>
+  <b class="rate">★</b>
+  <b class="rate">★</b>
+</div>
+
+<script>
+  $('.rating > .rate').click(function () {
+    $('.rating > .rate').removeClass('starred');
+    $('.rating').find('.rate:lt(' + $(this).index() + ')').add(this).addClass('starred');
+    alert($('.rating').find('.starred').length);
+  });
+</script>
