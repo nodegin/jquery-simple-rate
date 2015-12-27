@@ -11,6 +11,6 @@
 <script>
   $('#rating > b').click(function (e, t, l) {
     $(this).siblings().css('cursor', 'pointer').css('color', '#777');
-    !t && alert($(this).prevAll().add(this).css('color', '#f00').length);
+    !t && alert(l = $(this).prevAll().add(this).css('color', '#f00').length);
   }).trigger('click', !0);
 </script>
