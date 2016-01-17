@@ -1,16 +1,10 @@
-<div id="rating">
-  <b>&#x2605;</b>
-  <b>&#x2605;</b>
-  <b>&#x2605;</b>
-  <b>&#x2605;</b>
-  <b>&#x2605;</b>
-</div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+<body></body>
+
 <script>
-  $('#rating > b').click(function (e, t, l) {
+  $('<h2/>').append('<b>&#x2605;</b>'.repeat(5)).find('*').click(function (e, l) {
     $(this).siblings().css('cursor', 'pointer').css('color', '#777');
-    !t && alert(l = $(this).prevAll().add(this).css('color', '#f00').length);
-  }).trigger('click', !0);
+    !l && alert(l = $(this).prevAll().add(this).css('color', '#f00').length);
+  }).trigger('click', !0).parent().appendTo('body');
 </script>
